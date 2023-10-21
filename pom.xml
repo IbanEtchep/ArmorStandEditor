@@ -183,6 +183,12 @@
             <version>6.37.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>fr.iban</groupId>
+            <artifactId>Lands</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- Bentobox -->
         <dependency>
             <groupId>world.bentobox</groupId>
