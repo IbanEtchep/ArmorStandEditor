@@ -5,15 +5,15 @@ api-version: "1.17"
 folia-supported: true
 website: https://www.spigotmc.org/resources/94503/
 author: Wolfstorm
-authors: [Wolfstorm, DreiFxn, Pinnkk, Kugge, Marfjeh, miknes123, rypofalem, sekwah41, Sikatsu1997, Cool_boy, sumdream, Amaury Carrade, nicuch, kotarobo, prettydude, Jumpy91, Niasio, Patbox, Puremin0rez, Prof-Bloodstone, PlanetTeamSpeak]
+authors: [ Wolfstorm, DreiFxn, Pinnkk, Kugge, Marfjeh, miknes123, rypofalem, sekwah41, Sikatsu1997, Cool_boy, sumdream, Amaury Carrade, nicuch, kotarobo, prettydude, Jumpy91, Niasio, Patbox, Puremin0rez, Prof-Bloodstone, PlanetTeamSpeak ]
 description: Allows players to edit data of armorstands without any commands.
-softdepend: [Towny, WorldGuard, GriefPrevention, PlotSquared, Lands, bentobox]
+softdepend: [ Towny, WorldGuard, GriefPrevention, PlotSquared, Lands, bentobox ]
 
 commands:
   ase:
     description: Changes the function of the armorstand edit tool.
     usage: /<command> ? - list subcommands
-    aliases: [ase, asedit, armorstandeditor]
+    aliases: [ ase, asedit, armorstandeditor ]
     permission: asedit.basic
     permission-message: "You are lacking the permission node 'asedit.basic'"
 
@@ -88,7 +88,7 @@ permissions:
     default: true
   asedit.togglearmorstandglow:
     description: Allows toggling of the Glowing State of an ArmorStand.
-    default: true
+    default: false
   asedit.stats:
     description: Ability to view ArmorStand Stats.
     default: true
@@ -125,7 +125,7 @@ permissions:
       asedit.ignoreProtection.towny: true
       asedit.ignoreProtection.griefProtection: true
       asedit.ignoreProtection.plotSquared: true
-      asedit.ignoreProtection.worldGuard:  true
+      asedit.ignoreProtection.worldGuard: true
       asedit.ignoreProtection.skyblock: true
       asedit.ignoreProtection.griefDefender: true
       asedit.ignoreProtection.lands: true
@@ -136,7 +136,7 @@ permissions:
       asedit.ignoreProtection.towny: false
       asedit.ignoreProtection.griefProtection: false
       asedit.ignoreProtection.plotSquared: false
-      asedit.ignoreProtection.worldGuard:  false
+      asedit.ignoreProtection.worldGuard: false
       asedit.ignoreProtection.skyblock: false
       asedit.ignoreProtection.griefDefender: false
       asedit.ignoreProtection.lands: false

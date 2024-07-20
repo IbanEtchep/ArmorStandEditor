@@ -21,7 +21,6 @@ package io.github.rypofalem.armorstandeditor.menu;
 
 import io.github.rypofalem.armorstandeditor.ArmorStandEditorPlugin;
 import io.github.rypofalem.armorstandeditor.PlayerEditor;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
@@ -93,50 +92,50 @@ public class Menu {
 
         //Axis - X, Y, Z for Movement
         xAxis = createIcon(new ItemStack(Material.RED_CONCRETE, 1),
-            "xaxis", "axis x");
+                "xaxis", "axis x");
 
         yAxis = createIcon(new ItemStack(Material.GREEN_CONCRETE, 1),
-            "yaxis", "axis y");
+                "yaxis", "axis y");
 
         zAxis = createIcon(new ItemStack(Material.BLUE_CONCRETE, 1),
-            "zaxis", "axis z");
+                "zaxis", "axis z");
 
         //Movement Speed
         coarseAdj = createIcon(new ItemStack(Material.COARSE_DIRT, 1),
-            "coarseadj", "adj coarse");
+                "coarseadj", "adj coarse");
 
         fineAdj = createIcon(new ItemStack(Material.SMOOTH_SANDSTONE),
-            "fineadj", "adj fine");
+                "fineadj", "adj fine");
 
         //Reset Changes
         reset = createIcon(new ItemStack(Material.WATER_BUCKET),
-            "reset", "mode reset");
+                "reset", "mode reset");
 
         //Which Part to Move
         headPos = createIcon(new ItemStack(Material.IRON_HELMET),
-            "head", "mode head");
+                "head", "mode head");
 
         bodyPos = createIcon(new ItemStack(Material.IRON_CHESTPLATE),
-            "body", "mode body");
+                "body", "mode body");
 
         leftLegPos = createIcon(new ItemStack(Material.IRON_LEGGINGS),
-            "leftleg", "mode leftleg");
+                "leftleg", "mode leftleg");
 
         rightLegPos = createIcon(new ItemStack(Material.IRON_LEGGINGS),
-            "rightleg", "mode rightleg");
+                "rightleg", "mode rightleg");
 
         leftArmPos = createIcon(new ItemStack(Material.STICK),
-            "leftarm", "mode leftarm");
+                "leftarm", "mode leftarm");
 
         rightArmPos = createIcon(new ItemStack(Material.STICK),
-            "rightarm", "mode rightarm");
+                "rightarm", "mode rightarm");
 
         showArms = createIcon(new ItemStack(Material.STICK),
-            "showarms", "mode showarms");
+                "showarms", "mode showarms");
 
         //Praise Start - Sikatsu and cowgod, Nicely spotted this being broken
         if (pe.getPlayer().hasPermission("asedit.togglearmorstandvisibility") ||
-            pe.plugin.getArmorStandVisibility()) {
+                pe.plugin.getArmorStandVisibility()) {
             visibility = new ItemStack(Material.POTION, 1);
             PotionMeta potionMeta = (PotionMeta) visibility.getItemMeta();
             PotionEffect effect = new PotionEffect(PotionEffectType.INVISIBILITY, 1, 0);
@@ -150,7 +149,7 @@ public class Menu {
         }
 
         if (pe.getPlayer().hasPermission("asedit.toggleitemframevisibility") ||
-            pe.plugin.getItemFrameVisibility()) {
+                pe.plugin.getItemFrameVisibility()) {
             itemFrameVisible = new ItemStack(Material.ITEM_FRAME, 1);
             createIcon(itemFrameVisible, "itemframevisible", "mode itemframe");
         } else {
@@ -161,12 +160,12 @@ public class Menu {
 
         if (pe.getPlayer().hasPermission("asedit.toggleInvulnerability")) {
             toggleVulnerabilty = createIcon(new ItemStack(Material.TOTEM_OF_UNDYING, 1),
-                "vulnerability", "mode vulnerability");
+                    "vulnerability", "mode vulnerability");
         }
 
         if (pe.getPlayer().hasPermission("asedit.togglesize")) {
             size = createIcon(new ItemStack(Material.PUFFERFISH, 1),
-                "size", "mode size");
+                    "size", "mode size");
         }
         if (pe.getPlayer().hasPermission("asedit.disableslots")) {
             disableSlots = createIcon(new ItemStack(Material.BARRIER), "disableslots", "mode disableslots");
@@ -178,59 +177,59 @@ public class Menu {
 
         if (pe.getPlayer().hasPermission("asedit.togglebaseplate")) {
             plate = createIcon(new ItemStack(Material.SMOOTH_STONE_SLAB, 1),
-                "baseplate", "mode baseplate");
+                    "baseplate", "mode baseplate");
         }
 
         if (pe.getPlayer().hasPermission("asedit.movement")) {
             place = createIcon(new ItemStack(Material.RAIL, 1),
-                "placement", "mode placement");
+                    "placement", "mode placement");
         }
 
         if (pe.getPlayer().hasPermission("asedit.rotation")) {
             rotate = createIcon(new ItemStack(Material.COMPASS, 1),
-                "rotate", "mode rotate");
+                    "rotate", "mode rotate");
         }
 
         if (pe.getPlayer().hasPermission("asedit.equipment")) {
             equipment = createIcon(new ItemStack(Material.CHEST, 1),
-                "equipment", "mode equipment");
+                    "equipment", "mode equipment");
         }
 
         if (pe.getPlayer().hasPermission("asedit.copy")) {
             copy = createIcon(new ItemStack(Material.FLOWER_BANNER_PATTERN),
-                "copy", "mode copy");
+                    "copy", "mode copy");
 
             slot1 = createIcon(new ItemStack(Material.BOOK),
-                "copyslot", "slot 1", "1");
+                    "copyslot", "slot 1", "1");
 
             slot2 = createIcon(new ItemStack(Material.BOOK, 2),
-                "copyslot", "slot 2", "2");
+                    "copyslot", "slot 2", "2");
 
             slot3 = createIcon(new ItemStack(Material.BOOK, 3),
-                "copyslot", "slot 3", "3");
+                    "copyslot", "slot 3", "3");
 
             slot4 = createIcon(new ItemStack(Material.BOOK, 4),
-                "copyslot", "slot 4", "4");
+                    "copyslot", "slot 4", "4");
         }
 
         if (pe.getPlayer().hasPermission("asedit.paste")) {
             paste = createIcon(new ItemStack(Material.FEATHER),
-                "paste", "mode paste");
+                    "paste", "mode paste");
         }
 
         if (pe.getPlayer().hasPermission("asedit.head") && pe.plugin.getAllowedToRetrievePlayerHead()) {
             playerHead = createIcon(new ItemStack(Material.PLAYER_HEAD, 1),
-                "playerheadmenu",
-                "playerhead");
-        } else{
+                    "playerheadmenu",
+                    "playerhead");
+        } else {
             playerHead = blankSlot;
         }
 
-        if (pe.getPlayer().hasPermission("asedit.togglearmorstandglow")){
+        if (pe.getPlayer().hasPermission("asedit.togglearmorstandglow")) {
             glowing = createIcon(new ItemStack(Material.GLOW_INK_SAC, 1),
                     "armorstandglow",
                     "mode armorstandglow");
-        } else{
+        } else {
             glowing = blankSlot;
         }
 

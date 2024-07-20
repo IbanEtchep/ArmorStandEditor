@@ -18,30 +18,30 @@
  */
 package io.github.rypofalem.armorstandeditor.protections;
 
-import fr.iban.lands.LandManager;
 import fr.iban.lands.LandsPlugin;
+import fr.iban.lands.api.LandRepository;
 import fr.iban.lands.enums.Action;
-import fr.iban.lands.land.Land;
+import fr.iban.lands.model.land.Land;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
 public class LandsProtection implements Protection {
     private final boolean landsEnabled;
-    private LandManager landManager;
+    private LandRepository landRepository;
 
     public LandsProtection() {
         landsEnabled = Bukkit.getPluginManager().isPluginEnabled("Lands");
 
         if (landsEnabled)
-            landManager = LandsPlugin.getInstance().getLandManager();
+            landRepository = LandsPlugin.getInstance().getLandRepository();
     }
 
     @Override
     public boolean checkPermission(Block block, Player player) {
-        if (!landsEnabled || player.hasPermission("asedit.ignoreProtection.lands")) return true;
+        if (!landsEnabled) return true;
 
-        Land land = landManager.getLandAt(block.getLocation());
+        Land land = landRepository.getLandAt(block.getLocation());
 
         return land.isBypassing(player, Action.BLOCK_PLACE);
     }
