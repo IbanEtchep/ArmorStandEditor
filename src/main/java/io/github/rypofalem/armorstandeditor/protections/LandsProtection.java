@@ -31,7 +31,7 @@ public class LandsProtection implements Protection {
     private LandRepository landRepository;
 
     public LandsProtection() {
-        landsEnabled = Bukkit.getPluginManager().isPluginEnabled("Lands");
+        landsEnabled = Bukkit.getPluginManager().isPluginEnabled("MSLands");
 
         if (landsEnabled)
             landRepository = LandsPlugin.getInstance().getLandRepository();
